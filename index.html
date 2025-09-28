@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language – Day 1</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fa;
+      color: #333;
+    }
+
+    header {
+      background: #2a9d8f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #264653;
+      margin-top: 30px;
+      border-left: 4px solid #2a9d8f;
+      padding-left: 10px;
+    }
+
+    code, pre {
+      background: #f1f1f1;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    pre {
+      overflow-x: auto;
+      margin: 10px 0;
+      padding: 12px;
+      background: #272822;
+      color: #f8f8f2;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    .note {
+      background: #e9f5f3;
+      border-left: 5px solid #2a9d8f;
+      padding: 10px 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+
+    .practice {
+      background: #fef6e4;
+      border-left: 5px solid #f4a261;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
+    .practice h3 {
+      margin-top: 0;
+      color: #e76f51;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 1 – Introduction to C</h1>
+  </header>
+
+  <main>
+    <h2>1. What is C Language?</h2>
+    <p>
+      C is a general-purpose, procedural programming language developed by <b>Dennis Ritchie</b> in 1972 at Bell Labs.
+      It is called the <b>“mother of programming languages”</b> because many modern languages (C++, Java, Python, etc.) are influenced by C.
+    </p>
+    <p>
+      It is fast, efficient, and powerful, mostly used in <i>system programming, operating systems, and embedded systems</i>.
+    </p>
+
+    <h2>2. Features of C</h2>
+    <ul>
+      <li><b>Simple & powerful</b> – easy to learn but can handle complex tasks.</li>
+      <li><b>Portable</b> – programs can run on different machines.</li>
+      <li><b>Structured</b> – programs are divided into functions.</li>
+      <li><b>Rich library</b> – has built-in functions.</li>
+      <li><b>Memory management</b> – can directly access memory using pointers.</li>
+    </ul>
+
+    <h2>3. Structure of a C Program</h2>
+    <pre>
+#include &lt;stdio.h&gt;   // Header file
+int main() {         // Main function (entry point)
+    printf("Hello, World!");  // Statement
+    return 0;        // Exit status
+}
+    </pre>
+
+    <div class="note">
+      <p><code>#include &lt;stdio.h&gt;</code> → Preprocessor directive, includes standard input/output library.</p>
+      <p><code>main()</code> → Starting point of every C program.</p>
+      <p><code>{ }</code> → Denotes beginning and end of block.</p>
+      <p><code>printf()</code> → Used to print output.</p>
+      <p><code>return 0;</code> → Ends the program successfully.</p>
+    </div>
+
+    <h2>4. Basic Building Blocks</h2>
+    <ul>
+      <li><b>Keywords</b> → Reserved words (<code>int</code>, <code>return</code>, <code>if</code>, <code>for</code>).</li>
+      <li><b>Identifiers</b> → Names given to variables, functions (<code>marks</code>, <code>sum</code>).</li>
+      <li><b>Constants</b> → Fixed values (<code>10</code>, <code>'A'</code>, <code>3.14</code>).</li>
+      <li><b>Variables</b> → Containers to store data (<code>int age = 20;</code>).</li>
+      <li><b>Data Types</b> → Define the type of data (<code>int</code>, <code>float</code>, <code>char</code>, <code>double</code>).</li>
+    </ul>
+
+    <h2>5. Input & Output</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);  // %d for integer
+    printf("You are %d years old", age);
+    return 0;
+}
+    </pre>
+
+    <div class="practice">
+      <h3>📌 Practice Questions (Day 1)</h3>
+      <ol>
+        <li>Write a program to print your name and age.</li>
+        <li>What is the difference between keywords and identifiers? Give 3 examples each.</li>
+        <li>Write a program to add two numbers entered by the user.</li>
+        <li>What are constants? List at least 3 types with examples.</li>
+        <li>Explain the purpose of <code>#include &lt;stdio.h&gt;</code> in C programs.</li>
+      </ol>
+    </div>
+  </main>
+</body>
+</html>
