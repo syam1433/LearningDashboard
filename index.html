@@ -157,5 +157,169 @@ int main() {
       </ol>
     </div>
   </main>
+  <section>
+  <header>
+    <h1>Day 2 – Variables, Constants, and Data Types</h1>
+  </header>
+
+  <main>
+    <h2>🔹 1. Variables</h2>
+    <p>
+      A <b>variable</b> is like a box in memory where we can store a value.
+      Every variable has:
+    </p>
+    <ul>
+      <li><b>Name</b> (identifier)</li>
+      <li><b>Type</b> (<code>int</code>, <code>float</code>, <code>char</code>, …)</li>
+      <li><b>Value</b> (the data stored in it)</li>
+    </ul>
+
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int age = 20;        // integer variable
+    float marks = 85.5;  // float variable
+    char grade = 'A';    // character variable
+
+    printf("Age: %d\n", age);
+    printf("Marks: %.2f\n", marks);
+    printf("Grade: %c\n", grade);
+    return 0;
+}
+    </pre>
+
+    <h2>🔹 2. Rules for Naming Variables</h2>
+    <ul>
+      <li>Must start with <b>letter or underscore</b>.</li>
+      <li>Cannot use <b>keywords</b> like <code>int</code>, <code>float</code>, etc.</li>
+      <li>Cannot contain spaces or special symbols (<code>@, #, %, ...</code>).</li>
+      <li>Case sensitive (<code>value</code> ≠ <code>Value</code>).</li>
+    </ul>
+
+    <p>✅ Valid Examples:</p>
+    <pre>
+int total_marks;
+float average;
+char studentName[20];
+    </pre>
+
+    <p>❌ Invalid Examples:</p>
+    <pre>
+int 2count;     // cannot start with number
+float total%age; // cannot use %
+char float;     // cannot use keywords
+    </pre>
+
+    <h2>🔹 3. Constants</h2>
+    <p>
+      Constants are values that <b>do not change</b> during program execution.
+    </p>
+    <p><b>Types of Constants in C:</b></p>
+    <ul>
+      <li><b>Integer Constants</b> → <code>10, -25, 0</code></li>
+      <li><b>Floating Constants</b> → <code>3.14, -0.001</code></li>
+      <li><b>Character Constants</b> → <code>'A', '9', '$'</code></li>
+      <li><b>String Constants</b> → <code>"Hello", "C Language"</code></li>
+    </ul>
+
+    <p>✅ Example 1: Using <code>const</code> keyword</p>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    const float PI = 3.14;  // constant float
+    int r = 5;
+    printf("Area = %.2f\n", PI * r * r);
+    return 0;
+}
+    </pre>
+
+    <p>✅ Example 2: Using <code>#define</code></p>
+    <pre>
+#include &lt;stdio.h&gt;
+#define MAX 100   // constant defined at preprocessor level
+
+int main() {
+    printf("Maximum value = %d", MAX);
+    return 0;
+}
+    </pre>
+
+    <h2>🔹 4. Data Types in C</h2>
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+      <tr style="background:#f4f4f4">
+        <th>Data Type</th>
+        <th>Size (typical)</th>
+        <th>Example</th>
+        <th>Range</th>
+      </tr>
+      <tr>
+        <td><code>int</code></td>
+        <td>4 bytes</td>
+        <td><code>int a = 10;</code></td>
+        <td>-2,147,483,648 to 2,147,483,647</td>
+      </tr>
+      <tr>
+        <td><code>float</code></td>
+        <td>4 bytes</td>
+        <td><code>float pi = 3.14;</code></td>
+        <td>~6 decimal digits</td>
+      </tr>
+      <tr>
+        <td><code>double</code></td>
+        <td>8 bytes</td>
+        <td><code>double big = 123.456789;</code></td>
+        <td>~15 decimal digits</td>
+      </tr>
+      <tr>
+        <td><code>char</code></td>
+        <td>1 byte</td>
+        <td><code>char grade = 'A';</code></td>
+        <td>-128 to 127 or 0 to 255</td>
+      </tr>
+    </table>
+
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int roll = 25;
+    float percentage = 89.75;
+    double balance = 123456.789;
+    char grade = 'A';
+
+    printf("Roll: %d\n", roll);
+    printf("Percentage: %.2f\n", percentage);
+    printf("Balance: %.3lf\n", balance);
+    printf("Grade: %c\n", grade);
+
+    return 0;
+}
+    </pre>
+
+    <h2>🔹 5. sizeof Operator</h2>
+    <p>Used to find how many bytes a data type or variable occupies in memory.</p>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    printf("Size of int: %lu bytes\n", sizeof(int));
+    printf("Size of float: %lu bytes\n", sizeof(float));
+    printf("Size of double: %lu bytes\n", sizeof(double));
+    printf("Size of char: %lu byte\n", sizeof(char));
+    return 0;
+}
+    </pre>
+
+    <div class="practice">
+      <h3>📝 Practice Questions (Day 2)</h3>
+      <ol>
+        <li>Write a program to declare and print a student’s <b>name, roll number, percentage, and grade</b> using proper data types.</li>
+        <li>Declare a constant <code>PI</code> and write a program to calculate the <b>circumference of a circle</b>.</li>
+        <li>Check whether the following variable names are valid: <code>_value</code>, <code>2count</code>, <code>float</code>, <code>student_name</code>, <code>marks%</code>.</li>
+        <li>Write a program to find the <b>size of all data types</b> using <code>sizeof</code>.</li>
+        <li>Explain the difference between <code>const</code> keyword and <code>#define</code> with examples.</li>
+      </ol>
+    </div>
+  </main>
+</section>
+
 </body>
 </html>
