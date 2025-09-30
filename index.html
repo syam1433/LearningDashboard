@@ -320,6 +320,122 @@ int main() {
     </div>
   </main>
 </section>
+<section>
+  <header>
+    <h1>Day 3 – Operators & Expressions in C</h1>
+  </header>
+
+  <main>
+    <h2>🔹 1. What are Operators?</h2>
+    <p>
+      Operators are special symbols that perform operations on variables and values.  
+      For example: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>  
+    </p>
+    <p>
+      An <b>expression</b> is a combination of variables, constants, and operators that produces a result.
+    </p>
+
+    <pre>
+int result = (10 + 5) * 2;   // expression = 30
+    </pre>
+
+    <h2>🔹 2. Types of Operators</h2>
+
+    <h3>(a) Arithmetic Operators</h3>
+    <p>Used for mathematical calculations.</p>
+    <p><code>+ (addition), - (subtraction), * (multiplication), / (division), % (modulus)</code></p>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a = 10, b = 3;
+    printf("a + b = %d\n", a + b);
+    printf("a - b = %d\n", a - b);
+    printf("a * b = %d\n", a * b);
+    printf("a / b = %d\n", a / b);  // integer division
+    printf("a %% b = %d\n", a % b); // remainder
+    return 0;
+}
+    </pre>
+
+    <h3>(b) Relational Operators</h3>
+    <p>Compare two values, result is either true (1) or false (0).</p>
+    <p><code>==, !=, &gt;, &lt;, &gt;=, &lt;=</code></p>
+    <pre>
+int x = 5, y = 10;
+printf("%d\n", x &gt; y);   // 0 (false)
+printf("%d\n", x &lt; y);   // 1 (true)
+    </pre>
+
+    <h3>(c) Logical Operators</h3>
+    <p>Combine relational conditions.</p>
+    <p><code>&amp;&amp; (AND), || (OR), ! (NOT)</code></p>
+    <pre>
+int a = 5, b = 10;
+printf("%d\n", (a &gt; 0 &amp;&amp; b &gt; 0)); // 1 (true)
+printf("%d\n", (a &gt; 0 || b &lt; 0)); // 1 (true)
+printf("%d\n", !(a &gt; b));         // 1 (true)
+    </pre>
+
+    <h3>(d) Assignment Operators</h3>
+    <p>Used to assign values to variables.</p>
+    <p><code>=, +=, -=, *=, /=, %=</code></p>
+    <pre>
+int n = 10;
+n += 5;  // same as n = n + 5
+printf("%d", n); // 15
+    </pre>
+
+    <h3>(e) Increment &amp; Decrement Operators</h3>
+    <p><code>++</code> → increases value by 1</p>
+    <p><code>--</code> → decreases value by 1</p>
+    <pre>
+int a = 5;
+printf("%d\n", a++);  // prints 5, then a = 6
+printf("%d\n", ++a);  // a becomes 7, prints 7
+    </pre>
+
+    <h3>(f) Bitwise Operators (Intro Only)</h3>
+    <p>Work at the bit level.</p>
+    <p><code>&amp; (AND), | (OR), ^ (XOR), &lt;&lt; (Left Shift), &gt;&gt; (Right Shift)</code></p>
+    <pre>
+int a = 5, b = 3;  // binary: 5=101, 3=011
+printf("%d\n", a &amp; b);  // 1 (001)
+printf("%d\n", a | b);  // 7 (111)
+    </pre>
+
+    <h3>(g) Ternary Operator ?:</h3>
+    <p>Short way to write if-else.</p>
+    <pre>
+int age = 20;
+(age &gt;= 18) ? printf("Eligible\n") : printf("Not Eligible\n");
+    </pre>
+
+    <h2>🔹 3. Operator Precedence &amp; Associativity</h2>
+    <p><b>Precedence</b> = which operator is evaluated first.  
+    Example: <code>*</code> and <code>/</code> have higher precedence than <code>+</code> and <code>-</code>.</p>
+    <p><b>Associativity</b> = order when precedence is same.</p>
+    <pre>
+int result = 10 + 5 * 2;   // result = 20, because * has higher precedence
+    </pre>
+
+    <div class="practice">
+      <h3>📝 Practice Questions (Day 3)</h3>
+      <ol>
+        <li>Write a program to calculate the remainder when 125 is divided by 7.</li>
+        <li>Check whether a number is greater than 100 using relational operators.</li>
+        <li>Write a program to check if a person is eligible to vote (age ≥ 18) using the ternary operator.</li>
+        <li>If <code>a = 5</code>, <code>b = 2</code>, calculate and print:
+          <ul>
+            <li><code>a / b</code></li>
+            <li><code>a % b</code></li>
+            <li><code>a++ + ++b</code></li>
+          </ul>
+        </li>
+        <li>Explain the difference between <b>logical AND (&amp;&amp;)</b> and <b>bitwise AND (&amp;)</b> with an example.</li>
+      </ol>
+    </div>
+  </main>
+</section>
 
 </body>
 </html>
