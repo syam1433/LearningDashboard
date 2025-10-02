@@ -436,6 +436,128 @@ int result = 10 + 5 * 2;   // result = 20, because * has higher precedence
     </div>
   </main>
 </section>
+<section>
+  <header>
+    <h1>Day 4 – Control Statements in C (Decision Making)</h1>
+  </header>
+
+  <main>
+    <h2>🔹 1. Introduction</h2>
+    <p>
+      Control statements decide which part of the program should execute based on conditions.  
+      In C, the main control statements are:
+    </p>
+    <ul>
+      <li>if</li>
+      <li>if-else</li>
+      <li>nested if</li>
+      <li>if-else ladder</li>
+      <li>switch-case</li>
+      <li>goto (not recommended)</li>
+    </ul>
+
+    <h2>🔹 2. if Statement</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int age = 20;
+    if (age >= 18) {
+        printf("You are eligible to vote.\n");
+    }
+    return 0;
+}
+    </pre>
+
+    <h2>🔹 3. if-else Statement</h2>
+    <pre>
+int number = 15;
+if (number % 2 == 0) {
+    printf("Even number\n");
+} else {
+    printf("Odd number\n");
+}
+    </pre>
+
+    <h2>🔹 4. Nested if Statement</h2>
+    <pre>
+int a = 10, b = 20, c = 30;
+if (a > b) {
+    if (a > c)
+        printf("a is largest");
+} else {
+    if (b > c)
+        printf("b is largest");
+    else
+        printf("c is largest");
+}
+    </pre>
+
+    <h2>🔹 5. if-else Ladder</h2>
+    <pre>
+int marks = 75;
+if (marks >= 90)
+    printf("Grade: A\n");
+else if (marks >= 75)
+    printf("Grade: B\n");
+else if (marks >= 50)
+    printf("Grade: C\n");
+else
+    printf("Fail\n");
+    </pre>
+
+    <h2>🔹 6. switch-case Statement</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int choice = 2;
+    switch(choice) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        default:
+            printf("Invalid choice\n");
+    }
+    return 0;
+}
+    </pre>
+
+    <h2>🔹 7. goto Statement (Intro Only)</h2>
+    <p>
+      Used to jump to a labeled part of the program.  
+      ⚠️ Not recommended (makes code hard to read).
+    </p>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int i = 1;
+    loop:
+        printf("%d ", i);
+        i++;
+        if(i <= 5) goto loop;
+    return 0;
+}
+    </pre>
+
+    <div class="practice">
+      <h3>📝 Practice Questions (Day 4)</h3>
+      <ol>
+        <li>Write a program to check whether a given number is positive, negative, or zero using if-else.</li>
+        <li>Write a program to display the largest of three numbers using nested if.</li>
+        <li>Write a grading program using an if-else ladder where:<br>
+          ≥90 = A, 75–89 = B, 50–74 = C, &lt;50 = Fail
+        </li>
+        <li>Write a calculator program using switch-case to perform +, -, *, / operations.</li>
+        <li>What will happen if you forget <code>break;</code> inside a switch case? Give an example.</li>
+      </ol>
+    </div>
+  </main>
+</section>
 
 </body>
 </html>
